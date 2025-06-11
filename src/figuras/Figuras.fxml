@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Double?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="figuras.FigurasController">
+   <center>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="500.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Line fx:id="linea1" endX="100.0" layoutX="154.0" layoutY="45.0" startX="-100.0" />
+                  <Line fx:id="linea2" endX="100.0" layoutX="154.0" layoutY="110.0" startX="-100.0" />
+                  <Line fx:id="linea3" endX="100.0" layoutX="157.0" layoutY="174.0" startX="-100.0" />
+                  <Button fx:id="ampliarLinea1" layoutX="277.0" layoutY="31.0" mnemonicParsing="false" onAction="#ampliarLinea1" prefHeight="25.0" prefWidth="25.0" text="+" />
+                  <Button fx:id="ampliarLinea2" layoutX="277.0" layoutY="97.0" mnemonicParsing="false" onAction="#ampliarLinea2" prefHeight="25.0" prefWidth="25.0" text="+" />
+                  <Button fx:id="ampliarLinea3" layoutX="277.0" layoutY="161.0" mnemonicParsing="false" onAction="#ampliarLinea3" prefHeight="25.0" prefWidth="25.0" text="+" />
+                  <Button fx:id="reducirLinea1" layoutX="315.0" layoutY="31.0" mnemonicParsing="false" onAction="#reducirLinea1" prefHeight="25.0" prefWidth="25.0" text="-" />
+                  <Button fx:id="reducirLinea2" layoutX="315.0" layoutY="97.0" mnemonicParsing="false" onAction="#reducirLinea2" prefHeight="25.0" prefWidth="25.0" text="-" />
+                  <Button fx:id="reducirLinea3" layoutX="315.0" layoutY="161.0" mnemonicParsing="false" onAction="#reducirLinea3" prefHeight="25.0" prefWidth="25.0" text="-" />
+                  <ComboBox fx:id="colorLinea1" layoutX="357.0" layoutY="31.0" onAction="#cambiarColor1" prefHeight="25.0" prefWidth="120.0" />
+                  <ComboBox fx:id="colorLinea2" layoutX="357.0" layoutY="97.0" onAction="#cambiarColor2" prefHeight="25.0" prefWidth="120.0" />
+                  <ComboBox fx:id="colorLinea3" layoutX="357.0" layoutY="161.0" onAction="#cambiarColor3" prefHeight="25.0" prefWidth="120.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="281.0" prefWidth="498.0">
+               <children>
+                  <Polygon fx:id="triangulo" fill="#ddff00" layoutX="82.0" layoutY="89.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -60.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Rectangle fx:id="rectangulo" arcHeight="5.0" arcWidth="5.0" fill="#e5ff00" height="96.0" layoutX="321.0" layoutY="31.0" stroke="BLACK" strokeType="INSIDE" width="155.0" />
+                  <Button fx:id="Rotar" layoutX="151.0" layoutY="148.0" mnemonicParsing="false" onAction="#rotarFiguras" prefHeight="25.0" prefWidth="162.0" text="Rotar" />
+                  <Polygon fx:id="pentagono" fill="#e5ff00" layoutX="232.0" layoutY="89.0" stroke="BLACK" strokeType="INSIDE">
+                    <points>
+                        <Double fx:value="0.0" />
+                        <Double fx:value="-50.0" />
+				        <Double fx:value="47.55" />
+				        <Double fx:value="-15.45" />
+				        <Double fx:value="29.39" />
+				        <Double fx:value="40.45" />
+				        <Double fx:value="-29.39" />
+				        <Double fx:value="40.45" />
+				        <Double fx:value="-47.55" />
+				        <Double fx:value="-15.45" />
+                    </points>
+                  </Polygon>
+                  <Button fx:id="aumentarOpacidad" layoutX="12.0" layoutY="187.0" mnemonicParsing="false" onAction="#aumentarOpacidad" prefHeight="25.0" prefWidth="141.0" text="Aumentar Opacidad" />
+                  <Button fx:id="reducirOpacidad" layoutX="327.0" layoutY="187.0" mnemonicParsing="false" onAction="#reducirOpacidad" prefHeight="25.0" prefWidth="143.0" text="Reducir Opacidad" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>
